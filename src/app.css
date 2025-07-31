@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+:root {
+	--ff-primary: 'Nunito', sans-serif;
+}
+.ff-primary {
+	font-family: var(--ff-primary);
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+body {
+	font-family: var(--ff-primary);
+}
