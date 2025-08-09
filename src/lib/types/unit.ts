@@ -6,7 +6,7 @@ export interface Unit {
 	rarity: string;
 	element: string;
 	skin: string | null;
-	skin_id: string | null;
+	skin_id: string;
 	feed_reset_ts: number | null;
 	feed_count: number;
 	tokens: string;

@@ -12,6 +12,7 @@
 	import accessTokenStore from '$lib/stores/accessToken';
 	import userStore from '$lib/stores/user';
 	import unitsStore from '$lib/stores/units';
+	import treesStore from '$lib/stores/trees';
 
 	// Methods
 	let { children } = $props();
@@ -27,6 +28,9 @@
 			const result = await userApi.me();
 			userStore.set(result.user);
 			unitsStore.set(result.units);
+			if (result.trees) {
+				treesStore.set(result.trees);
+			}
 		} catch (error) {
 			console.error(error);
 		}
